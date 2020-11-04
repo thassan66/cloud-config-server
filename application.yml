@@ -9,16 +9,26 @@ eureka:
     
     
 microservice:
-  payment-service:
+  rule-service:
     endpoints:
       endpoint:
-        uri: http://PAYMENT-SERVICE/payment/doPayment
-  order-service:
+        uri: http://RULE-SERVICE/otar/rule
+  merchant-service:
     endpoints:
       endpoint:
-        uri: http://ORDER-SERVICE/order/bookOrder
+        uri: http://MERCHANT-SERVICE/otar/merchant
   airtime-service:
     endpoints:
       endpoint:
         uri: http://AIRTIME-SERVICE/otar/airtime
+  airtime-adaptor-service:
+    endpoints:
+      endpoint:
+        uri: http://AIRTIME-ADAPTOR-SERVICE/otar/airtimeadaptor
+  erp-adaptor-service:
+    endpoints:
+      endpoint:
+        uri: http://ERP-ADAPTOR-SERVICE/otar/erpadaptor
+
+
 
